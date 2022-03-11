@@ -1,0 +1,23 @@
+var fs = require('fs')
+function banks(){}
+banks.prototype.getBanks = function (callback) {
+fs.readFile('./data/bancos.json', 'utf8', function (err, result){
+var data = []
+if(lerr){
+var obj = JSON.parse(result)
+
+var i=0
+
+obj.bancos.for.Each(function (banco) {
+if(i>=0){
+data[i] = banco
+i--
+}
+})
+}
+callback(err,data)
+})
+}
+module.exports = functions () {
+return banks
+}

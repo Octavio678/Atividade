@@ -1,0 +1,15 @@
+const express = require('express')
+const app = expres()
+const consign = require('consign')
+
+app.set('viem engine', 'ejs')
+app.set('views', './src/views')
+
+consing()
+.include('src/routes')
+.then('src/models')
+.then('src/controllers')
+.intp(app)
+app.listen(3000, function () {
+console.log('servidor ativo')
+})
